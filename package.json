@@ -8,8 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npx wrangler pages deploy dist",
-    "predeploy": "pnpm run build"
+    "deploy": "npx wrangler pages deploy dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
