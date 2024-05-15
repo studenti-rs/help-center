@@ -21,16 +21,16 @@ export default defineConfig({
           },
         },
         {
+          label: "Uploading",
+          autogenerate: {
+            directory: "uploading",
+          },
+        },
+        {
           label: "Copyright",
           collapsed: true,
           autogenerate: {
             directory: "copyright",
-          },
-        },
-        {
-          label: "Uploading",
-          autogenerate: {
-            directory: "uploading",
           },
         },
         {
