@@ -1,6 +1,7 @@
 ---
 title: Copyright Infringement
 description: We are dedicated to protecting your intellectual property.
+tableOfContents: false
 ---
 
 **We are dedicated to protecting your intellectual property.**
@@ -13,7 +14,7 @@ It is our policy to respond to clear notices of alleged copyright infringement. 
 
 Remember that your use of studenti.rs Services is, at all times, subject to our Terms of Use, which incorporates this Copyright Dispute Policy. Any terms studenti.rs uses in this Policy without defining them have the definitions given to them in the [Terms of Use](https://studenti.rs/terms).
 
-Submit a copyright infringement notification or a counter notice via our [form](../support/take-down.md)
+Submit a copyright infringement notification or a counter notice via our [form](./take-down.md)
 
 ## Further reading
 

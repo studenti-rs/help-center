@@ -1,6 +1,7 @@
 ---
 title: Introduction
 description: How does studenti.rs work?
+tableOfContents: false
 ---
 
 studenti.rs is the ultimate platform for students worldwide. Our mission is to empower everyone to excel at their studies by providing the best tools to study more efficiently.
@@ -13,4 +14,4 @@ You have the freedom to stop your subscription at any time. To do that, access t
 
 Make sure to read our Terms of Use to stay on top of your rights and obligations when using our Platform.
 
-More questions? Please reach out to our [Customer Support](../support) team.
+More questions? Please reach out to our [Customer Support](../support/copyright-infringement.md) team.

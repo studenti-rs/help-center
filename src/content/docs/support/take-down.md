@@ -1,6 +1,7 @@
 ---
 title: Submit a take down request
 description: We are dedicated to protecting your intellectual property.
+tableOfContents: false
 ---
 
 **We are dedicated to protecting your intellectual property.**
