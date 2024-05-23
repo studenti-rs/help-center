@@ -8,7 +8,9 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npx wrangler pages deploy dist"
+    "deploy": "npx wrangler pages deploy dist",
+    "test:e2e": "playwright test",
+    "test:e2e:report": "pnpm exec playwright show-report"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
@@ -16,5 +18,9 @@
     "astro": "^4.3.5",
     "sharp": "^0.32.5",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12"
   }
 }
