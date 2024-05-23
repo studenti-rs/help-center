@@ -26,6 +26,12 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          projectName: "studenti-help-center"
-          directory: "dist"
+          projectName: studenti-help-center
+          directory: ./dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post URL as comment to PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: "Deployed to Cloudflare Pages: ${{ steps.Publish.outputs.url }}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
