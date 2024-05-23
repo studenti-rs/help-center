@@ -20,8 +20,8 @@ jobs:
         with:
           version: 9
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install dependencies and build
+        run: pnpm install && pnpm run build
 
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
