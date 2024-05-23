@@ -1,3 +1,5 @@
+name: Deploy to Cloudflare Pages
+
 on: [push]
 jobs:
   deploy:
@@ -5,12 +7,20 @@ jobs:
     permissions:
       contents: read
       deployments: write
-    name: Deploy to Cloudflare Pages
+
+    name: Build and Deploy
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
       - name: Build
         run: pnpm install && pnpm run build
+
       - name: Publish
         uses: cloudflare/pages-action@1
         with:
