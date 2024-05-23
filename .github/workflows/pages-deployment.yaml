@@ -1,21 +1,52 @@
-on: [push]
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
-    name: Deploy to Cloudflare Pages
+      pull-requests: write
+
+    name: Build and Deploy
+    env:
+      CI: true
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
       - name: Build
         run: pnpm install && pnpm run build
+
       - name: Publish
+        id: publish
         uses: cloudflare/pages-action@1
         with:
           apiToken: ${{ secrets.CF_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          projectName: "studenti-help-center"
-          directory: "dist"
+          projectName: studenti-help-center
+          directory: ./dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post URL as comment to PR
+        if: github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          hide_and_recreate: true
+          hide_classify: "OUTDATED"
+          message: "Deployed to Cloudflare Pages: ${{ steps.publish.outputs.url }}"
