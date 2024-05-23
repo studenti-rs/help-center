@@ -13,9 +13,9 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Getting Started",
+          label: "Start",
           autogenerate: {
-            directory: "getting-started",
+            directory: "start",
           },
         },
         {
@@ -26,16 +26,31 @@ export default defineConfig({
         },
         {
           label: "Copyright",
-          collapsed: true,
           autogenerate: {
             directory: "copyright",
           },
         },
         {
           label: "Support",
-          autogenerate: {
-            directory: "support",
-          },
+          items: [
+            {
+              label: "Help",
+              link: "/support/help",
+            },
+            {
+              label: "Copyright Infringement",
+              link: "/support/copyright-infringement",
+            },
+            {
+              label: "Take down request",
+              link: "/support/take-down",
+            },
+            {
+              label: "Contact",
+              link: "https://...tallyforms somewhere",
+              badge: "↗",
+            },
+          ],
         },
       ],
     }),

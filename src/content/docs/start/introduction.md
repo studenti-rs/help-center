@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Intro to studenti.rs
 description: How does studenti.rs work?
 tableOfContents: false
 ---
@@ -14,4 +14,4 @@ You have the freedom to stop your subscription at any time. To do that, access t
 
 Make sure to read our Terms of Use to stay on top of your rights and obligations when using our Platform.
 
-More questions? Please reach out to our [Customer Support](../support/copyright-infringement.md) team.
+More questions? Please reach out to our [Customer Support](../support/help.md) team.
