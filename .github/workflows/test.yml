@@ -1,4 +1,5 @@
-name: e2e
+name: Test
+
 on:
   push:
     branches: [main]
@@ -6,9 +7,10 @@ on:
     branches: [main]
 
 jobs:
-  test:
-    timeout-minutes: 60
+  build_and_test:
+    name: Test
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
