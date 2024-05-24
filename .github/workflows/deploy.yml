@@ -1,15 +1,15 @@
-name: Deploy
+name: deploy
 
 on:
   workflow_run:
-    workflows: ["Test"]
+    workflows: ["test"]
     types:
       - completed
 
 jobs:
   deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    name: Deploy
+    name: deploy
     runs-on: ubuntu-latest
     permissions:
       contents: read
